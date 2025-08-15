@@ -75,7 +75,7 @@ export default function Nav() {
         style={{ top: '60px', willChange: 'transform', height: 'auto' }}
         onClick={e => e.stopPropagation()}
       >
-  <ul className="flex flex-col justify-center items-center mt-7 px-6 pb-4">
+  <ul className="flex flex-col justify-center items-center mt-12 px-6 pb-4">
           <li>
             <Link href="/" className="block py-2 text-lg text-[var(--foreground)] hover:scale-110 hover:text-[var(--accent)] hover:no-underline" onClick={() => setOpen(false)}>Home</Link>
           </li>
