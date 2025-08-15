@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import "../globals.css";
-import styles from './nav.module.css';
 import { Parisienne } from 'next/font/google';
 
 const parisienne = Parisienne({

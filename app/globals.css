@@ -22,4 +22,47 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+#hero-section {
+  scroll-snap-align: start;
+  /* Tailwind: flex flex-col pt-28 items-center w-screen h-screen text-[var(--foreground)] */
+  background: var(--background);
+  min-height: 100vh;
+}
 
+#hero-image-container {
+  /* Tailwind: relative flex */
+  position: relative;
+  display: flex;
+  height: 80%
+}
+
+#hero-image {
+  /* Tailwind: rounded-lg shadow-lg */
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+
+#hero-image-2 {
+  /* Tailwind: w-325 h-full */
+  max-width: 325px;
+  width: 100%;
+  height: auto;
+}
+
+#hero-text {
+  /* Tailwind: w-full h-40 flex items-center justify-center mt-0 */
+  width: 100%;
+  min-height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+#hero-title {
+  /* Tailwind: text-4xl sm:text-6xl flex-wrap font-bold text-center */
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  flex-wrap: wrap;
+}
