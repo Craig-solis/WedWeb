@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import "../globals.css";
+import styles from './nav.module.css';
 import { Parisienne } from 'next/font/google';
 
 const parisienne = Parisienne({
@@ -13,7 +14,7 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-  <nav className="fixed top-0 left-0 w-full z-50 flex flex-col items-center text-[var(--foreground)] shadow-md">
+  <nav className="fixed top-0 left-0 w-full z-50 flex flex-col items-center text-[var(--foreground)] shadow-md bg-[var(--background)]">
       {/* Overlay for mobile menu */}
       {open && (
         <div
