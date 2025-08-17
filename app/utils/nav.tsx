@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "../globals.css";
 import { Parisienne } from 'next/font/google';
 
@@ -11,9 +11,29 @@ const parisienne = Parisienne({
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const [showNav, setShowNav] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (typeof window === 'undefined') return;
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
+        setShowNav(false); // scrolling down
+      } else {
+        setShowNav(true); // scrolling up
+      }
+      lastScrollY.current = currentScrollY;
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-  <nav className="fixed top-0 left-0 w-full z-50 flex flex-col items-center text-[var(--foreground)] shadow-md bg-[var(--background)]">
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 flex flex-col items-center text-[var(--foreground)] shadow-md bg-[var(--background)] transition-transform duration-300 ${showNav ? 'translate-y-0' : '-translate-y-full'}`}
+      style={{ willChange: 'transform' }}
+    >
       {/* Overlay for mobile menu */}
       {open && (
         <div
@@ -53,9 +73,6 @@ export default function Nav() {
             </li>
             <li>
               <Link href="/schedule" className="text-lg hover:no-underline text-[var(--foreground)] hover:text-[var(--accent)]">Schedule</Link>
-            </li>
-            <li>
-              <Link href="/location" className="text-lg hover:no-underline text-[var(--foreground)] hover:text-[var(--accent)]">Location</Link>
             </li>
             <li>
               <Link href="/location" className="text-lg hover:no-underline text-[var(--foreground)] hover:text-[var(--accent)]">Location</Link>
@@ -108,4 +125,6 @@ export default function Nav() {
       </div>
     </nav>
   );
+
+
 }

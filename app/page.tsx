@@ -7,7 +7,7 @@ const parisienne = Parisienne({ subsets: ['latin'], weight: '400' });
 export default function Home() {
   return (
     <section id="hero-section" className="flex flex-col pt-28 items-center w-full min-h-screen text-[var(--foreground)]">
-  <div id="hero-image-container" className="relative flex w-full max-w-[85%] sm:max-w-225 md:max-w-[50%] h-80 sm:h-96 md:h-[30rem] mt-8 shadow-lg">
+  <div id="hero-image-container" className="relative flex w-full max-w-[85%] sm:max-w-[85%] md:max-w-[50%] h-80 sm:h-96 md:h-[30rem] mt-8 shadow-lg">
         <Image
           id="hero-image"
           src="/20250802_011945000_iOS.jpg"
@@ -33,10 +33,10 @@ export default function Home() {
       </div>
       <section className="w-full flex flex-col items-center">
         <div>
-          <h1 className="text-[var(--accent)] italic underline text-3xl mt-0 sm:text-5xl sm:mb-12">We're getting married!</h1>
+          <h1 className="text-[var(--accent)] italic underline text-3xl mt-0 sm:text-3xl sm:mb-12 md:text-4xl">We're getting married!</h1>
         </div>
         <div id="hero-text" className="w-full min-h-40 flex items-center justify-center mt-0">
-          <h1 id="hero-title" className={`text-4xl sm:text-6xl flex-wrap font-bold text-center ${parisienne.className}`}>Kyge Polling <br /> & <br /> Alyssa Solis</h1>
+          <h1 id="hero-title" className={`text-4xl sm:text-5xl md:text-6xl flex-wrap font-bold text-center ${parisienne.className}`}>Kyge Polling <br /> & <br /> Alyssa Solis</h1>
         </div>
       </section>
     </section>
