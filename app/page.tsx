@@ -1,13 +1,22 @@
+"use client";
 import "./globals.css";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { Parisienne, MonteCarlo } from 'next/font/google';
 
 const parisienne = Parisienne({ subsets: ['latin'], weight: '400' });
 const monteCarlo = MonteCarlo({ subsets: ['latin'], weight: '400' });
 
 export default function Home() {
+  const [fadeIn, setFadeIn] = useState(false);
+  useEffect(() => {
+    setFadeIn(true);
+  }, []);
   return (
-    <section id="hero-section" className="flex flex-col pt-28 items-center w-full min-h-screen text-[var(--foreground)]">
+    <section
+      id="hero-section"
+  className={`flex flex-col pt-28 items-center w-full min-h-screen text-[var(--foreground)] transition-opacity duration-1500 ${fadeIn ? 'opacity-100' : 'opacity-0'}`}
+    >
       <div id="hero-image-container" className="relative flex w-full max-w-[85%] sm:max-w-[85%] md:max-w-[50%] lg:max-w-[30%] h-80 sm:h-96 md:h-[30rem] mt-8 shadow-lg">
         <div className="hidden sm:block relative w-full h-120 sm:translate-x-[-70%] 2xl:translate-x-[-70%]">
           <Image
