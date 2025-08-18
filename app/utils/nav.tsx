@@ -2,11 +2,16 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import "../globals.css";
-import { Parisienne } from 'next/font/google';
+import { Parisienne, MonteCarlo } from 'next/font/google';
 
 const parisienne = Parisienne({
   subsets: ['latin'],
   weight: '400', // Parisienne only has 400
+});
+
+const monteCarlo = MonteCarlo({
+  subsets: ['latin'],
+  weight: '400', // MonteCarlo only has 400
 });
 
 export default function Nav() {
@@ -44,7 +49,7 @@ export default function Nav() {
       )}
   <div className="flex items-center p-4 w-full flex-col relative">
         {/* Left: Logo */}
-        <div className={`font-bold flex text-4xl sm:text-5xl mb-4 ${parisienne.className}`}>Kyge and Alyssa</div>
+        <div className={`font-bold flex text-4xl sm:text-5xl mb-4 ${monteCarlo.className}`}>Kyge and Alyssa</div>
         {/* Right: Nav and Hamburger, take remaining space */}
         <div className="flex-1 flex items-center justify-center relative">
           {/* Hamburger Icon with animation */}
