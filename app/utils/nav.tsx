@@ -78,9 +78,6 @@ export default function Nav() {
               <Link href="/location" className="text-lg hover:no-underline text-[var(--foreground)] hover:text-[var(--accent)]">Location</Link>
             </li>
             <li>
-              <Link href="/gallery" className="text-lg hover:no-underline text-[var(--foreground)] hover:text-[var(--accent)]">Gallery</Link>
-            </li>
-            <li>
               <Link href="/rsvp" className="text-lg font-bold italic hover:no-underline text-[var(--foreground)] hover:text-[var(--accent)]">RSVP</Link>
             </li>
           </ul>
