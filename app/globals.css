@@ -1,3 +1,11 @@
+@keyframes petal-fall {
+  0% { opacity: 0; transform: translateY(0) scale(1) rotate(0deg);}
+  10% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(100vh) scale(0.8) rotate(30deg);}
+}
+.animate-petal-fall {
+  animation: petal-fall 5.5s linear infinite;
+}
 @import "tailwindcss";
 
 @media (prefers-color-scheme) {
