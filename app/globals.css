@@ -1,3 +1,7 @@
+/* Force Tinos font for all children of .tinos-section */
+.tinos-section, .tinos-section * {
+  font-family: 'Tinos', serif !important;
+}
 @keyframes petal-fall {
   0% { opacity: 0; transform: translateY(0) scale(1) rotate(0deg);}
   10% { opacity: 1; }

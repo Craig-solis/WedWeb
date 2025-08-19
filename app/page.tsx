@@ -102,10 +102,10 @@ export default function Home() {
         <div className={`mt-4 mb-20 md:mt-12 md:mb-20 border-t-2 border-b-2 w-[95%] md:w-[50%] align-center justify-center px-2 shadow-md rounded ${tinos.className}`}>
           <h2 className="text-3xl sm:text-3xl md:text-5xl mb-3 font-bold text-center">Countdown to the big day:</h2>
           <div className=" flex justify-center items-center mb-8">
-            <CountdownClient date={new Date('2025-12-31T00:00:00')} />
+              <CountdownClient date={new Date('2025-11-14T00:16:00')} />
           </div>
           <br />
-          <p className="text-center text-xl mb-2"> <span className="font-bold">November 14th,2025</span><br />The time is ticking! If you haven't already, make sure to <Link href="/rsvp" className="font-bold underline text-xl">RSVP!</Link></p>
+          <p className="text-center text-xl mb-2"> <span className="font-bold">November 14th, 2025</span><br />The time is ticking! If you haven't already, make sure to <Link href="/rsvp" className="font-bold underline text-xl">RSVP!</Link></p>
         </div>
       </section>
     </section>
