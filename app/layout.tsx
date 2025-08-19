@@ -34,7 +34,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}>
         <Nav />
-        {children}
+        <div className="fade-in">
+          {children}
+        </div>
       </body>
     </html>
   );

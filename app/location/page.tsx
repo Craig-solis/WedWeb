@@ -50,7 +50,7 @@ export default function Location() {
                 ></iframe>
             </section>
             <section className={`${tinos.className} w-full text-center mt-8 mb-20`}>
-                <div className="w-[95%] md:w-[60%] border-2 border-[var(--foreground)] rounded-lg mx-auto shadow-lg">
+                <div className="w-[95%] md:w-[60%] border-2 border-[var(--foreground)] rounded-lg mx-auto shadow-lg pb-4">
                     <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold mt-6 text-center text-[var(--foreground)]">Nearby Accommodations</h2>
                     <p className="mt-4 text-center text-lg">Interested in staying nearby? <br />Here is a link to Booking.com we recommend for accommodations:</p>
                     <a
