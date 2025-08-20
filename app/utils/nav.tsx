@@ -2,16 +2,16 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import "../globals.css";
-import { Parisienne, MonteCarlo } from 'next/font/google';
-
-const parisienne = Parisienne({
-  subsets: ['latin'],
-  weight: '400', // Parisienne only has 400
-});
+import { Parisienne, MonteCarlo, Tinos } from 'next/font/google';
 
 const monteCarlo = MonteCarlo({
   subsets: ['latin'],
   weight: '400', // MonteCarlo only has 400
+});
+
+const tinos = Tinos({
+  subsets: ['latin'],
+  weight: '400', // Tinos only has 400
 });
 
 export default function Nav() {
@@ -69,7 +69,7 @@ export default function Nav() {
             />
           </button>
           {/* Desktop Nav */}
-          <ul className="hidden sm:flex space-x-6 items-center justify-center w-full">
+          <ul className={`hidden sm:flex space-x-6 items-center justify-center w-full ${tinos.className}`}>
             <li>
               <Link href="/" className="text-lg hover:no-underline text-[var(--foreground)] hover:text-[var(--accent)]">Home</Link>
             </li>
@@ -83,6 +83,9 @@ export default function Nav() {
               <Link href="/location" className="text-lg hover:no-underline text-[var(--foreground)] hover:text-[var(--accent)]">Location</Link>
             </li>
             <li>
+              <Link href="/faq" className="text-lg hover:no-underline text-[var(--foreground)] hover:text-[var(--accent)]">FAQ</Link>
+            </li>
+            <li>
               <Link href="/rsvp" className="text-lg font-bold italic hover:no-underline text-[var(--foreground)] hover:text-[var(--accent)]">RSVP</Link>
             </li>
           </ul>
@@ -90,7 +93,7 @@ export default function Nav() {
       </div>
       {/* Mobile Menu: Slide down from hamburger button */}
       <div
-  className={`sm:hidden absolute left-0 right-0 mx-auto w-full bg-white shadow-lg z-40 transform transition-transform transition-opacity duration-500 ease-in-out origin-top overflow-hidden ${open ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0'}`}
+        className={`${tinos.className} sm:hidden absolute left-0 right-0 mx-auto w-full bg-white shadow-lg z-40 transform transition-transform transition-opacity duration-500 ease-in-out origin-top overflow-hidden ${open ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0'}`}
         style={{ top: '60px', willChange: 'transform', height: 'auto' }}
         onClick={e => e.stopPropagation()}
       >
@@ -111,6 +114,11 @@ export default function Nav() {
           <li>
             <Link href="/location" className="block py-2 text-lg text-[var(--foreground)] hover:scale-110 hover:text-[var(--accent)] hover:no-underline" onClick={() => setOpen(false)}>
               Location
+            </Link>
+          </li>
+          <li>
+            <Link href="/faq" className="block py-2 text-lg text-[var(--foreground)] hover:scale-110 hover:text-[var(--accent)] hover:no-underline" onClick={() => setOpen(false)}>
+              FAQ
             </Link>
           </li>
           <li>

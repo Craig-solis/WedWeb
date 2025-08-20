@@ -51,7 +51,7 @@ export default function RSVP() {
                     <h1 className="text-4xl text-center text-[var(--foreground)] font-bold z-10">RSVP</h1>
                     <p className="text-xl text-center mb-6 z-10">Celebrate our special day and join us! <br /> RSVP today so we can get you in our books.</p>
                     <img src="/wedding-invitation.png" alt="RSVP" className="w-80 h-auto mb-6 z-10" />
-                    <p className="text-xl z-10">Please click <a href="https://forms.gle/cqf92izohpvTdjLX6" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] text-2xl">here</a> to RSVP.</p>
+                    <p className="text-xl z-10">Please click <a href="https://forms.gle/cqf92izohpvTdjLX6" target="_blank" rel="noopener noreferrer" className="text-[var(--foreground)] text-2xl font-semibold italic underline">here</a> to RSVP.</p>
                 </div>
                 {/* Roses */}
                 <div className="z-10">
@@ -60,8 +60,8 @@ export default function RSVP() {
                         alt="Rose 2"
                         width={600}
                         height={600}
-                        className="hidden md:block absolute top-1/2 rotate-[120deg] scale-y-[-1] sm:translate-x-[40%] sm:translate-y-[-60%] 2xl:translate-x-[80%] 2xl:translate-y-[-70%]"
-                        style={{ zIndex: 10 }}
+                        className="hidden md:block absolute top-1/2 rotate-[120deg] scale-y-[-1] md:translate-x-[10%] md:translate-y-[-90%] lg:translate-x-[40%] lg:translate-y-[-60%] 2xl:translate-x-[80%] 2xl:translate-y-[-70%]"
+                        style={{ zIndex: -10 }}
                         priority
                     />
                 </div>
@@ -71,7 +71,7 @@ export default function RSVP() {
                         alt="Rose 1"
                         width={600}
                         height={600}
-                        className="hidden md:block absolute top-1/2 rotate-[60deg] sm:translate-x-[-145%] sm:translate-y-[-60%] 2xl:translate-x-[-180%] 2xl:translate-y-[-70%]"
+                        className="hidden md:block absolute top-1/2 rotate-[60deg] md:translate-x-[-125%] md:translate-y-[-60%] lg:translate-x-[-145%] lg:translate-y-[-60%] 2xl:translate-x-[-180%] 2xl:translate-y-[-70%]"
                         style={{ zIndex: 10 }}
                         priority
                     />

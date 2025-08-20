@@ -17,7 +17,7 @@ export default function Location() {
                         alt="Rose 2"
                         width={600}
                         height={600}
-                        className="hidden md:block absolute top-1/2 rotate-[90deg] scale-y-[-1] sm:translate-x-[40%] sm:translate-y-[-70%] 2xl:translate-x-[80%] 2xl:translate-y-[-80%]"
+                        className="hidden md:block absolute top-1/2 rotate-[90deg] scale-y-[-1] md:translate-x-[30%] md:translate-y-[-110%] lg:translate-x-[40%] lg:translate-y-[-70%] 2xl:translate-x-[80%] 2xl:translate-y-[-80%]"
                         style={{ zIndex: 10 }}
                         priority
                     />
@@ -28,8 +28,8 @@ export default function Location() {
                         alt="Rose 2"
                         width={600}
                         height={600}
-                        className="hidden md:block absolute top-1/2 rotate-[-55deg] scale-y-[-1] sm:translate-x-[-145%] sm:translate-y-[30%] 2xl:translate-x-[-180%] 2xl:translate-y-[0%]"
-                        style={{ zIndex: 10 }}
+                        className="hidden md:block absolute top-1/2 rotate-[-55deg] scale-y-[-1] md:translate-x-[-105%] md:translate-y-[-10%] lg:translate-x-[-145%] lg:translate-y-[30%] 2xl:translate-x-[-180%] 2xl:translate-y-[0%]"
+                        style={{ zIndex: -10 }}
                         priority
                     />
                 </div>
@@ -53,7 +53,7 @@ export default function Location() {
                 ></iframe>
             </section>
             <section className={`${tinos.className} w-full text-center mt-8 mb-20`}>
-                <div className="w-[95%] md:w-[60%] border-2 border-[var(--foreground)] rounded-lg mx-auto shadow-lg pb-4">
+                <div className="bg-[var(--background)] w-[95%] md:w-[60%] border-2 border-[var(--foreground)] rounded-lg mx-auto shadow-lg pb-4">
                     <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold mt-6 text-center text-[var(--foreground)]">Nearby Accommodations</h2>
                     <p className="mt-4 text-center text-lg">Interested in staying nearby? <br />Here is a link to Booking.com we recommend for accommodations:</p>
                     <a

@@ -25,20 +25,20 @@ export default function Home() {
             alt="Rose 1"
             width={600}
             height={600}
-            className="hidden md:block absolute top-1/2 rotate-[45deg] sm:translate-x-[-85%] sm:translate-y-[-50%] 2xl:translate-x-[-125%] 2xl:translate-y-[-50%]"
+            className="hidden md:block absolute top-1/2 rotate-[45deg] md:translate-x-[-90%] md:translate-y-[-50%] 2xl:translate-x-[-125%] 2xl:translate-y-[-50%]"
             style={{ zIndex: 10 }}
             priority
           />
         </div>
         {/* Left Frame */}
-        <div className="hidden sm:block relative w-full h-160 sm:translate-x-[-60%] 2xl:translate-x-[-70%]">
+        <div className="hidden md:block relative w-full h-140 2xl:h-160 md:translate-x-[-70%] lg:translate-x-[-60%] 2xl:translate-x-[-70%] z-[-10]">
           <Image
             id="left-side"
             src="/side_frame.png"
             alt="Left Frame"
             fill
             style={{ objectFit: "contain", objectPosition: "center" }}
-            className="w-[100%] sm:w-150 h-[100px] sm:h-auto"
+            className="w-[100%] sm:w-150 h-[100px] sm:h-[150px]"
             sizes="(max-width: 620px) 100vw, 100vw"
             priority
           />
@@ -55,7 +55,7 @@ export default function Home() {
           priority
         />
         {/* Right Frame */}
-        <div className="hidden sm:block w-full h-160 sm:translate-x-[60%] 2xl:translate-x-[70%]">
+        <div className="hidden md:block w-full md:h-140 2xl:h-160 md:translate-x-[70%] lg:translate-x-[60%] 2xl:translate-x-[70%] z-[-10]">
           <Image
             id="right-side"
             src="/side_frame.png"
@@ -74,7 +74,7 @@ export default function Home() {
             alt="Rose 2"
             width={600}
             height={600}
-            className="hidden md:block absolute top-1/2 rotate-[135deg] scale-y-[-1] sm:translate-x-[-15%] sm:translate-y-[20%] 2xl:translate-x-[15%] 2xl:translate-y-[20%]"
+            className="hidden md:block absolute top-1/2 rotate-[135deg] scale-y-[-1] md:translate-x-[-15%] md:translate-y-[20%] 2xl:translate-x-[15%] 2xl:translate-y-[20%]"
             style={{ zIndex: 10 }}
             priority
           />
@@ -99,7 +99,7 @@ export default function Home() {
           <h1 id="hero-title" className={`text-5xl sm:text-5xl md:text-6xl flex-wrap font-bold text-center ${monteCarlo.className}`}>Kyge Polling <br /> & <br /> Alyssa Solis</h1>
         </div>
         {/* Countdown Timer */}
-        <div className={`mt-4 mb-20 md:mt-12 md:mb-20 border-t-2 border-b-2 w-[95%] md:w-[50%] align-center justify-center px-2 shadow-md rounded ${tinos.className}`}>
+        <div className={`mt-4 mb-20 md:mt-12 md:mb-20 border-t-2 border-b-2 w-[95%] md:w-[60%] align-center justify-center px-2 shadow-md rounded ${tinos.className}`}>
           <h2 className="text-3xl sm:text-3xl md:text-5xl mb-3 font-bold text-center">Countdown to the big day:</h2>
           <div className=" flex justify-center items-center mb-8">
               <CountdownClient date={new Date('2025-11-14T00:16:00')} />

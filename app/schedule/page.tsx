@@ -10,7 +10,7 @@ export default function Schedule() {
               alt="Rose 2"
               width={600}
               height={600}
-              className="hidden sm:block absolute top-1/2 rotate-[120deg] scale-y-[-1] sm:translate-x-[40%] sm:translate-y-[-60%] 2xl:translate-x-[80%] 2xl:translate-y-[-90%]"
+              className="hidden md:block absolute top-1/2 rotate-[120deg] scale-y-[-1] md:translate-x-[10%] md:translate-y-[-100%] lg:translate-x-[40%] lg:translate-y-[-60%] 2xl:translate-x-[80%] 2xl:translate-y-[-90%]"
               style={{ zIndex: 10 }}
               priority
           />
@@ -21,7 +21,7 @@ export default function Schedule() {
               alt="Rose 2"
               width={600}
               height={600}
-              className="hidden sm:block absolute top-1/2 rotate-[-60deg] scale-y-[-1] sm:translate-x-[40%] sm:translate-y-[-60%] 2xl:translate-x-[-180%] 2xl:translate-y-[-60%]"
+              className="hidden md:block absolute top-1/2 rotate-[-60deg] scale-y-[-1] md:translate-x-[-100%] md:translate-y-[-80%] lg:translate-x-[-140%] lg:translate-y-[-60%] 2xl:translate-x-[-180%] 2xl:translate-y-[-60%]"
               style={{ zIndex: 10 }}
               priority
           />
