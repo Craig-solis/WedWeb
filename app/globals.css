@@ -21,7 +21,7 @@
 
 @media (prefers-color-scheme) {
   :root {
-    --background: #ffffff;
+    --background: #ffecef;
     --foreground: #640000;
     --accent: #ffb6c1;
   }

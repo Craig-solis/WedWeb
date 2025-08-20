@@ -10,7 +10,7 @@ const tinos = Tinos({
 export default function Location() {
     return (
         <div>
-            <section id=" flex location-section" className={`flex flex-col items-center w-full mt-32 h-auto ${tinos.className}`}>
+            <section id=" flex location-section" className={`flex flex-col items-center w-full h-auto ${tinos.className}`}>
                 <div>
                     <Image
                         src="/rose.png"
@@ -33,7 +33,10 @@ export default function Location() {
                         priority
                     />
                 </div>
-                <h2 className="text-4xl sm:text-4xl md:text-5xl font-bold mt-6 text-[var(--foreground)]">Our Wedding Venue!</h2>
+                <div>
+                    <h2 className="text-4xl sm:text-4xl md:text-5xl font-bold mt-6 text-[var(--foreground)]">Our Wedding Venue</h2>
+                </div>
+                
                 <p className="mt-4 mb-8 text-center text-xl">We can't wait to celebrate with you! <br />Check out the details below.</p>
                 <p>
 

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Parisienne } from "next/font/google";
 import "./globals.css";
 import Nav from "./utils/nav";
-import Image from "next/image";
+import ScrollToTop from "./utils/ScrollToTop";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,8 +34,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}>
+        <ScrollToTop />
         <Nav />
-        <div className="fade-in">
+        <div className="fade-in pt-31">
           {children}
         </div>
       </body>

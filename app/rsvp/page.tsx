@@ -42,16 +42,16 @@ export default function RSVP() {
                 );
             });
         return (
-            <section className={`flex flex-col items-center justify-center ${tinos.className} w-full min-h-full mt-31 text-[var(--foreground)] transition-opacity duration-1500 relative overflow-hidden`}>
+            <section className={`flex flex-col items-center justify-center ${tinos.className} w-full min-h-full text-[var(--foreground)] transition-opacity duration-1500 relative overflow-hidden`}>
                 {/* Petal Matrix Rain (background) */}
                 <div className="fixed inset-0 w-full h-full pointer-events-none z-0">
                     {petals}
                 </div>
-                <div className="bg-[var(--background)] w-[70%] md:w-[30%] h-full flex flex-col items-center justify-center relative z-10 mt-4">
+                <div className="border-[var(--foreground)] border-1 rounded-lg backdrop-blur-[10px] w-[80%] md:w-[50%] h-full flex flex-col items-center justify-center relative z-10 mt-4 p-4">
                     <h1 className="text-4xl text-center text-[var(--foreground)] font-bold z-10">RSVP</h1>
                     <p className="text-xl text-center mb-6 z-10">Celebrate our special day and join us! <br /> RSVP today so we can get you in our books.</p>
                     <img src="/wedding-invitation.png" alt="RSVP" className="w-80 h-auto mb-6 z-10" />
-                    <p className="text-xl z-10">Please click <a href="https://forms.gle/cqf92izohpvTdjLX6" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)]">here</a> to RSVP.</p>
+                    <p className="text-xl z-10">Please click <a href="https://forms.gle/cqf92izohpvTdjLX6" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] text-2xl">here</a> to RSVP.</p>
                 </div>
                 {/* Roses */}
                 <div className="z-10">

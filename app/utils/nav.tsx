@@ -114,11 +114,6 @@ export default function Nav() {
             </Link>
           </li>
           <li>
-            <Link href="/gallery" className="block py-2 text-lg text-[var(--foreground)] hover:scale-110 hover:text-[var(--accent)] hover:no-underline" onClick={() => setOpen(false)}>
-              Gallery
-            </Link>
-          </li>
-          <li>
             <Link href="/rsvp" className="block py-2 text-lg font-bold italic text-[var(--foreground)] hover:scale-110 hover:text-[var(--accent)] hover:no-underline" onClick={() => setOpen(false)}>
               RSVP
             </Link>

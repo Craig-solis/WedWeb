@@ -14,10 +14,10 @@ export default function Home() {
   return (
     <section
       id="hero-section"
-      className="flex flex-col pt-28 items-center w-full min-h-screen text-[var(--foreground)] transition-opacity duration-1500"
+      className="flex flex-col items-center w-full min-h-screen text-[var(--foreground)] transition-opacity duration-1500"
     >
       {/* Hero Images and Roses */}
-      <div id="hero-image-container" className="relative flex w-full max-w-[85%] sm:max-w-[85%] md:max-w-[50%] lg:max-w-[60%] h-100 sm:h-96 md:h-[35rem] mt-8 shadow-lg">
+      <div id="hero-image-container" className="relative flex w-full max-w-[85%] sm:max-w-[85%] md:max-w-[50%] 2xl:max-w-[40%] h-100 sm:h-96 md:h-[35rem] 2xl:h-[40rem] mt-8 shadow-lg">
         {/* Rose 1 */}
         <div>
           <Image
@@ -25,13 +25,13 @@ export default function Home() {
             alt="Rose 1"
             width={600}
             height={600}
-            className="hidden md:block absolute top-1/2 rotate-[45deg] sm:translate-x-[-85%] sm:translate-y-[-50%] 2xl:translate-x-[-100%] 2xl:translate-y-[-50%]"
+            className="hidden md:block absolute top-1/2 rotate-[45deg] sm:translate-x-[-85%] sm:translate-y-[-50%] 2xl:translate-x-[-125%] 2xl:translate-y-[-50%]"
             style={{ zIndex: 10 }}
             priority
           />
         </div>
         {/* Left Frame */}
-        <div className="hidden sm:block relative w-full h-140 sm:translate-x-[-60%] 2xl:translate-x-[-60%]">
+        <div className="hidden sm:block relative w-full h-160 sm:translate-x-[-60%] 2xl:translate-x-[-70%]">
           <Image
             id="left-side"
             src="/side_frame.png"
@@ -55,7 +55,7 @@ export default function Home() {
           priority
         />
         {/* Right Frame */}
-        <div className="hidden sm:block w-full h-140 sm:translate-x-[60%] 2xl:translate-x-[60%]">
+        <div className="hidden sm:block w-full h-160 sm:translate-x-[60%] 2xl:translate-x-[70%]">
           <Image
             id="right-side"
             src="/side_frame.png"
@@ -74,17 +74,17 @@ export default function Home() {
             alt="Rose 2"
             width={600}
             height={600}
-            className="hidden md:block absolute top-1/2 rotate-[135deg] scale-y-[-1] sm:translate-x-[-15%] sm:translate-y-[20%] 2xl:translate-x-[-10%] 2xl:translate-y-[20%]"
+            className="hidden md:block absolute top-1/2 rotate-[135deg] scale-y-[-1] sm:translate-x-[-15%] sm:translate-y-[20%] 2xl:translate-x-[15%] 2xl:translate-y-[20%]"
             style={{ zIndex: 10 }}
             priority
           />
         </div>
       </div>
       {/* Bottom Frame */}
-      <div className="relative w-full max-w-full h-18 sm:h-20 md:h-28 mt-2">
+      <div className="relative w-full max-w-full h-18 sm:h-20 md:h-30 mt-2">
         <Image
           id="bottom-frame"
-          src="/b95c293c-13cd-4b79-9559-ea1a4507ee77.png"
+          src="/bottom-frame.png"
           alt="Bottom Frame"
           fill
           style={{ objectFit: "contain", objectPosition: "center" }}
@@ -96,7 +96,7 @@ export default function Home() {
       {/* Main Content Section */}
       <section className="mt-2 w-full flex flex-col items-center">
         <div id="hero-text" className="w-full min-h-40 flex items-center justify-center mt-0">
-          <h1 id="hero-title" className={`text-4xl sm:text-5xl md:text-6xl flex-wrap font-bold text-center ${monteCarlo.className}`}>Kyge Polling <br /> & <br /> Alyssa Solis</h1>
+          <h1 id="hero-title" className={`text-5xl sm:text-5xl md:text-6xl flex-wrap font-bold text-center ${monteCarlo.className}`}>Kyge Polling <br /> & <br /> Alyssa Solis</h1>
         </div>
         {/* Countdown Timer */}
         <div className={`mt-4 mb-20 md:mt-12 md:mb-20 border-t-2 border-b-2 w-[95%] md:w-[50%] align-center justify-center px-2 shadow-md rounded ${tinos.className}`}>
