@@ -96,7 +96,7 @@ export default function Home() {
       {/* Main Content Section */}
       <section className="mt-2 w-full flex flex-col items-center">
         <div id="hero-text" className="w-full min-h-40 flex items-center justify-center mt-0">
-          <h1 id="hero-title" className={`text-5xl sm:text-5xl md:text-6xl flex-wrap font-bold text-center ${monteCarlo.className}`}>Kyge Polling <br /> & <br /> Alyssa Solis</h1>
+          <h1 id="hero-title" className={`text-5xl sm:text-5xl md:text-6xl flex-wrap font-bold text-center ${monteCarlo.className}`}>Kyge Poling <br /> & <br /> Alyssa Solis</h1>
         </div>
         {/* Countdown Timer */}
         <div className={`mt-4 mb-20 md:mt-12 md:mb-20 border-t-2 border-b-2 w-[95%] md:w-[60%] align-center justify-center px-2 shadow-md rounded ${tinos.className}`}>
@@ -105,7 +105,7 @@ export default function Home() {
               <CountdownClient date={new Date('2025-11-14T00:16:00')} />
           </div>
           <br />
-          <p className="text-center text-xl mb-2"> <span className="font-bold">November 14th, 2025</span><br />The time is ticking! If you haven't already, make sure to <Link href="/rsvp" className="font-bold underline text-xl">RSVP!</Link></p>
+          <p className="text-center text-2xl mb-2"> <span className="font-bold">November 14th, 2025</span><br />The time is ticking! If you haven't already, make sure to <Link href="/rsvp" className="font-bold underline text-xl">RSVP!</Link></p>
         </div>
       </section>
     </section>
