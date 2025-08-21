@@ -1,3 +1,11 @@
+.nav-underline.active,
+.block.active {
+  color: var(--accent) !important;
+}
+.nav-underline.active::after {
+  transform: translateX(-50%) scaleX(1);
+  background: var(--accent);
+}
 @keyframes pulse-faq-circle {
   0%,
   100% {
@@ -54,7 +62,7 @@ html {
   :root {
     --background: #ffecef;
     --foreground: #640000;
-    --accent: #ffb6c1;
+    --accent: #ff93a3;
   }
 }
 
@@ -70,4 +78,27 @@ html {
 body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+
+  /* Center-out underline effect for nav links */
+  .nav-underline {
+    position: relative;
+    display: inline-block;
+  }
+  .nav-underline::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 80%;
+    height: 2px;
+    background: var(--accent);
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 1px;
+  }
+  .nav-underline:hover::after,
+  .nav-underline:focus::after {
+    transform: translateX(-50%) scaleX(1);
+  }
 }
