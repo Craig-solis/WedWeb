@@ -24,29 +24,19 @@ export default function FAQPage() {
             delay="0s"
           />
           <FAQList
-            title="What should I wear?"
-            response="We recommend wearing formal wedding attire for the ceremony, such as button-up shirts and dresses. We encourage you to dress comfortably and avoid white colors!"
+            title="When is everything happening?"
+            response="The ceremony starts at 4pm. Following the ceremony, around 6pm is the reception. At 10:30pm the event will conclude."
             delay="0.15s"
           />
           <FAQList
-            title="Is there a theme for the wedding?"
-            response="Yes, the theme for the wedding is 'Country Rustic' with colors of burgundy and light pink."
+            title="What is the theme for the wedding?"
+            response="The theme for the wedding is an elegant touch of burgundy and light pink."
             delay="0.3s"
           />
           <FAQList
             title="Will the wedding be indoors or outdoors?"
             response="The wedding will be held outdoors, weather permitting, and the reception will follow indoors."
             delay="0.45s"
-          />
-          <FAQList
-            title="Can I bring a plus one?"
-            response="Yes, you are welcome to bring a plus one. Please indicate this in your RSVP as we will use this to finalize seating and catering arrangements."
-            delay="0.6s"
-          />
-          <FAQList
-            title="Will there be food and drinks?"
-            response="Yes, there will be a full meal served at the reception along with drinks."
-            delay="0.75s"
           />
           <FAQList
             title="Will there be a gift registry?"
@@ -57,11 +47,6 @@ export default function FAQPage() {
             title="Is there a deadline for RSVPs?"
             response="Yes, please RSVP no later than October 24th, 2025 to ensure your party's spot."
             delay="1.05s"
-          />
-          <FAQList
-            title="Will there be an open bar?"
-            response="Yes, there will be an open bar with limited drink options available. If you rather have your own specific kind, please feel free to BYOB."
-            delay="1.2s"
           />
           <FAQList
             title="Can I take pictures of the wedding?"

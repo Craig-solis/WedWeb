@@ -106,6 +106,7 @@ export default function Nav() {
                 Registry
               </Link>
             </li>
+            {/* Schedule Link
             <li>
               <Link
                 href="/schedule"
@@ -116,6 +117,7 @@ export default function Nav() {
                 Schedule
               </Link>
             </li>
+            */}
             <li>
               <Link
                 href="/location"
@@ -182,6 +184,7 @@ export default function Nav() {
               Registry
             </Link>
           </li>
+          {/* Schedule Link
           <li>
             <Link
               href="/schedule"
@@ -193,6 +196,7 @@ export default function Nav() {
               Schedule
             </Link>
           </li>
+          */}
           <li>
             <Link
               href="/location"
