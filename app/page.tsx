@@ -114,19 +114,19 @@ export default function Home() {
         >
           <Image
             src="/rose.png"
-            alt="Rose 2"
-            width={400}
-            height={400}
-            className="hidden md:block absolute top-1/2 rotate-[110deg] scale-y-[-1] md:translate-x-[140%] md:translate-y-[50%] 2xl:translate-x-[55%] 2xl:translate-y-[20%]"
+            alt="Rose 1"
+            width={500}
+            height={500}
+            className="hidden md:block absolute top-1/2 rotate-[110deg] scale-y-[-1] xl:w-130 md:translate-x-[140%] md:translate-y-[50%] xl:translate-x-[115%] xl:translate-y-[40%] 2xl:translate-x-[155%] 2xl:translate-y-[50%]"
             style={{ zIndex: 10 }}
             priority
           />
           <Image
             src="/rose.png"
             alt="Rose 2"
-            width={400}
-            height={400}
-            className="hidden md:block absolute top-1/2 rotate-[5deg] scale-y-[-1] md:translate-x-[-140%] md:translate-y-[50%] 2xl:translate-x-[55%] 2xl:translate-y-[20%]"
+            width={500}
+            height={500}
+            className="hidden md:block absolute top-1/2 rotate-[5deg] scale-y-[-1] xl:w-130 xl:translate-x-[-115%] xl:translate-y-[40%] md:translate-x-[-140%] md:translate-y-[50%] 2xl:translate-x-[-155%] 2xl:translate-y-[50%]"
             style={{ zIndex: 10 }}
             priority
           />
