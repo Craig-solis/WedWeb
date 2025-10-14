@@ -112,6 +112,24 @@ export default function Home() {
           id="hero-text"
           className="w-full min-h-40 flex items-center justify-center mt-0"
         >
+          <Image
+            src="/rose.png"
+            alt="Rose 1"
+            width={500}
+            height={500}
+            className="hidden md:block absolute top-1/2 rotate-[110deg] scale-y-[-1] xl:w-130 md:translate-x-[140%] md:translate-y-[50%] xl:translate-x-[115%] xl:translate-y-[40%] 2xl:translate-x-[155%] 2xl:translate-y-[50%]"
+            style={{ zIndex: 10 }}
+            priority
+          />
+          <Image
+            src="/rose.png"
+            alt="Rose 2"
+            width={500}
+            height={500}
+            className="hidden md:block absolute top-1/2 rotate-[5deg] scale-y-[-1] xl:w-130 xl:translate-x-[-115%] xl:translate-y-[40%] md:translate-x-[-140%] md:translate-y-[50%] 2xl:translate-x-[-155%] 2xl:translate-y-[50%]"
+            style={{ zIndex: 10 }}
+            priority
+          />
           <h1
             id="hero-title"
             className={`text-5xl sm:text-5xl md:text-6xl flex-wrap font-bold text-center ${monteCarlo.className}`}
@@ -123,7 +141,7 @@ export default function Home() {
         <div
           className={`mt-4 mb-20 md:mt-12 md:mb-20 border-t-2 border-b-2 w-[95%] md:w-[60%] align-center justify-center px-2 shadow-md rounded ${tinos.className}`}
         >
-          <h2 className="text-3xl sm:text-3xl md:text-5xl mb-3 font-bold text-center">
+          <h2 className="text-3xl sm:text-3xl md:text-4xl mb-3 font-bold text-center">
             Countdown to the big day:
           </h2>
           <div className=" flex justify-center items-center mb-8">

@@ -6,7 +6,7 @@ const countdownRenderer = ({ days, hours, minutes, seconds, completed }: any) =>
     return <span className="font-bold">Event started!</span>;
   } else {
     return (
-      <span className=" flex gap-6 font-bold text-xl md:text-3xl text-center">
+      <span className=" flex gap-6 font-bold text-xl md:text-2xl text-center">
         <span>Days: {String(days).padStart(2, '0')}</span>
         <span>Hours: {String(hours).padStart(2, '0')}</span>
         <span>Minutes: {String(minutes).padStart(2, '0')}</span>

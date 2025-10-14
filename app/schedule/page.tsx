@@ -27,7 +27,7 @@ export default function Schedule() {
           />
       </div>
       <h1 className="mt-4 text-4xl font-bold">Schedule Page</h1>
-        <p className="text-2xl mt-8 text-center">Stay tuned for the schedule of events!</p>
+        <p className="text-2xl mt-8 text-center">Ceremony starts at 4pm. At 5pm the bride and groom will take their pitures. Around 6pm will be the reception. 7pm will be cake. </p>
     </section>
   );
 }
