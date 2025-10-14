@@ -46,7 +46,7 @@ export default function Registry() {
                             height={150}
                             className="mx-auto mb-4"
                         />
-                        <h2 className="text-center text-xl lg:text-2xl font-bold"><a href="https://cash.app/$Alyssa16Solis?qr=1" className="hover:text-[var(--accent)] underline">Cash App</a></h2>
+                        <h2 className="text-center text-xl lg:text-2xl font-bold">$Alyssa16Solis<br /><a href="https://cash.app/$Alyssa16Solis?qr=1" className="hover:text-[var(--accent)] underline">Cash App</a></h2>
                     </div>
                     <div>
                         <Image 
@@ -56,7 +56,7 @@ export default function Registry() {
                             height={150}
                             className="mx-auto mb-4"
                         />
-                        <h2 className="text-center text-xl lg:text-2xl font-bold"><a href="https://account.venmo.com/u/KygePoling" className="hover:text-[var(--accent)] underline">Venmo</a></h2>
+                        <h2 className="text-center text-xl lg:text-2xl font-bold">@KygePoling<br /><a href="https://account.venmo.com/u/KygePoling" className="hover:text-[var(--accent)] underline">Venmo</a></h2>
                     </div>
                     <div>
                         <Image 
