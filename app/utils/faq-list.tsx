@@ -1,8 +1,9 @@
 import FaqHeartIcon from "./FaqHeartIcon";
+import { ReactNode } from "react";
 
 type FAQListProps = {
   title: string;
-  response: string;
+  response: string | ReactNode;
   delay: string;
 };
 

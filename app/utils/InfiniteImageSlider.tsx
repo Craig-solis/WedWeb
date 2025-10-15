@@ -1,15 +1,11 @@
 import Image from "next/image";
 
 const images = [
-  "/infinite-photos/20250802_011748000_iOS.jpg",
   "/infinite-photos/20250802_012347000_iOS.jpg",
   "/infinite-photos/20250802_012322000_iOS.jpg",
   "/infinite-photos/20250802_011945000_iOS.jpg",
   "/infinite-photos/20250802_011707000_iOS.jpg",
   "/infinite-photos/20250802_010325000_iOS.jpg",
-  "/infinite-photos/20250801_153042624_iOS.jpg",
-  "/infinite-photos/20250801_153016884_iOS.jpg",
-  "/infinite-photos/20250801_153005092_iOS.jpg",
   "/infinite-photos/20250802_012902000_iOS.jpg",
 ];
 

@@ -40,7 +40,7 @@ export default function FAQPage() {
           />
           <FAQList
             title="Will there be a gift registry?"
-            response="Yes, we will have a gift registry available. More details will be provided closer to the wedding date."
+            response="There is a gift registry. Please visit the 'Registry' page for more details."
             delay="0.90s"
           />
           <FAQList
@@ -50,8 +50,24 @@ export default function FAQPage() {
           />
           <FAQList
             title="Can I take pictures of the wedding?"
-            response="We love photos! We do ask that you refrain from taking photos during the ceremony, we’d like that time to be unplugged as we have a photographer capturing the moment for us. For the rest of the wedding, we encourage guests to post pictures. We are working on a platform to share photos after the event!"
+            response="We love photos! We do ask that you refrain from taking photos during the ceremony, we’d like that time to be unplugged as we have a photographer capturing the moment for us. For the rest of the wedding, we encourage guests to post pictures."
+            delay="1.20s"
+          />
+          <FAQList
+            title="What should I wear?"
+            response="The dress code for the wedding is semi-formal. We recommend cocktail attire, such as dresses, or suits. Please avoid wearing white or burgundy. (Example: cocktail dresses for the ladies, jeans, boots, button-up, blazers, for the men)"
             delay="1.35s"
+          />
+          <FAQList
+            title="Need more information?"
+            response={
+              <>
+                If you have any other questions or need further assistance, please don't hesitate to reach out to us.
+                <br />
+                <strong>Alyssa Solis: (512)924-9131</strong>
+              </>
+            }
+            delay="1.50s"
           />
         </ul>
       </div>

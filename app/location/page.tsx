@@ -42,7 +42,7 @@ export default function Location() {
 
                 </p>
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6912.80341042621!2d-97.89235578491827!3d29.96788342883464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865b568a0325bd11%3A0xb071775dfa93a453!2sTexas%20Old%20Town!5e0!3m2!1sen!2sus!4v1755388758032!5m2!1sen!2sus"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.3367105749257!2d-97.89658964594389!3d29.969751901203377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865b57aad6180dfd%3A0xc1f160064c2a5d0f!2sStone%20Hall!5e0!3m2!1sen!2sus!4v1760495757385!5m2!1sen!2sus"
                     width="90%"
                     height="450"
                     className="border-0 rounded-lg shadow-lg w-[90%] sm:w-[65%]"
