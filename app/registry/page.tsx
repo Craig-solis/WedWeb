@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Tinos, Parisienne } from 'next/font/google';
 import "../globals.css";
+import RegistryTile from '../utils/RegistryTile';
 
 const tinos = Tinos({
     subsets: ['latin'],
@@ -49,9 +50,37 @@ export default function Registry() {
                         height={200}
                         className="mx-auto mb-4 w-[150px] lg:w-[200px]"
                     />
-                    <h2 className="text-center text-2xl lg:text-3xl font-bold">Amazon Registry<br /><a href="https://www.amazon.com/wedding/registry/ZM3R01OFL2B1" className="hover:text-[var(--accent)] text-lg lg:text-xl underline">View Registry</a></h2>
+                    <h2 className="text-center text-2xl lg:text-3xl font-bold">Amazon Registry<br /><a href="https://www.amazon.com/wedding/registry/ZM3R01OFL2B1" className="hover:text-[var(--accent)] text-lg lg:text-xl underline">View Full Registry</a></h2>
                 </div>
-                <h2 className="text-center text-2xl font-bold mt-6">Other Ways to Give!</h2>
+                
+                {/* Featured Registry Items */}
+                <div className="w-full mt-8">
+                    <h2 className="text-center text-2xl font-bold mb-6">Featured Items</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto w-[300px] lg:w-full">
+                        <RegistryTile 
+                            title="Stanley Wet/Dry Vacuum"
+                            price="$48.99"
+                            description="Perfect for cleaning up any mess"
+                            image="/registry_images/Stanley_vaccum.jpg"
+                        />
+                        
+                        <RegistryTile 
+                            title="Portable Upholstery Deep Cleaner"
+                            price="$78.75"
+                            description="Deep cleans carpets and upholstery"
+                            image="/registry_images/shampooer.jpg"
+                        />
+                        
+                        <RegistryTile 
+                            title="Bissell Power Fresh Steam Mop"
+                            price="$92.69"
+                            description="For our deep cleaning needs"
+                            image="/registry_images/mop.jpg"
+                        />
+                    </div>
+                </div>
+
+                <h2 className="text-center text-2xl font-bold mt-8">Other Ways to Give!</h2>
                 <div className="flex flex-row flex-wrap justify-center gap-12">
                     <div>
                         <Image 
