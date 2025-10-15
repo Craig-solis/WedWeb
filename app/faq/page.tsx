@@ -20,7 +20,7 @@ export default function FAQPage() {
         <ul className="h-auto">
           <FAQList
             title="What time should I arrive?"
-            response="Please arrive no later than 30 minutes before the ceremony. You will not be allowed in once the ceremony starts, so please be on time."
+            response="Please arrive no later than 30 minutes before the ceremony. Please be on time so there aren't any disruptions during the ceremony."
             delay="0s"
           />
           <FAQList
@@ -45,7 +45,7 @@ export default function FAQPage() {
           />
           <FAQList
             title="Is there a deadline for RSVPs?"
-            response="Yes, please RSVP no later than October 24th, 2025 to ensure your party's spot."
+            response="Yes, please RSVP no later than November 1st, 2025 to ensure your party's spot."
             delay="1.05s"
           />
           <FAQList

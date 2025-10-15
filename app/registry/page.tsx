@@ -35,8 +35,18 @@ export default function Registry() {
         </div>
         <h1 className="mt-4 text-center text-4xl font-bold">Registry</h1>
         <div className="w-full flex max-w-[400px] lg:max-w-[800px] mx-auto mt-4 p-4 border border-[2px] border-[var(--border)] rounded-lg backdrop-blur-xs z-10">
-            <div className="flex flex-1 flex-wrap items-center justify-center gap-8">
-                <h2 className="text-center text-2xl font-bold">Cash always helps and is greatly appreciated!</h2>
+            <div className="flex flex-1 flex-wrap flex-col items-center justify-center gap-4">
+                <div className="border border-[var(--border)] p-4 rounded-lg w-full">
+                    <Image 
+                        src="/Amazon_QR.png"
+                        alt="Amazon QR Code"
+                        width={200}
+                        height={200}
+                        className="mx-auto mb-4"
+                    />
+                    <h2 className="text-center text-xl lg:text-2xl font-bold">Amazon<br /><a href="https://www.amazon.com/wedding/registry/ZM3R01OFL2B1" className="hover:text-[var(--accent)] underline">View Registry</a></h2>
+                </div>
+                <h2 className="text-center text-2xl font-bold">Other Ways to Give!</h2>
                 <div className="flex flex-row flex-wrap justify-center gap-8">
                     <div>
                         <Image 
