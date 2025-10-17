@@ -55,7 +55,7 @@ export default function FAQPage() {
           />
           <FAQList
             title="What should I wear?"
-            response="The dress code for the wedding is semi-formal. We recommend cocktail attire, such as dresses, or suits. Please avoid wearing white or burgundy. (Example: cocktail dresses for the ladies, jeans, boots, button-up, blazers, for the men)"
+            response="The dress code for the wedding is semi-formal. We recommend cocktail attire, such as dresses, or suits. Please avoid wearing white or burgundy."
             delay="1.35s"
           />
           <FAQList
