@@ -15,7 +15,7 @@ const parisienne = Parisienne({
 
 export default function Registry() {
   return (
-    <section className={`flex flex-col ${tinos.className} items-center w-full min-h-screen text-[var(--foreground)] transition-opacity duration-1500 relative overflow-hidden`}>
+    <section className={`flex flex-col ${tinos.className} items-center w-full min-h-screen text-[var(--foreground)] transition-opacity duration-1500 relative overflow-hidden mb-20`}>
         {/* Roses */}
         <div className="z-10">
             <Image
