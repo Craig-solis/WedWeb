@@ -53,13 +53,13 @@ export default function Nav() {
     >
       {open && (
         <div
-          className="sm:hidden fixed inset-0 z-40"
+          className="sm:hidden fixed left-0 right-0 bottom-0 z-30 top-[68px] pointer-events-auto"
           onClick={() => setOpen(false)}
           aria-label="Close menu overlay"
         />
       )}
 
-      <div className="flex items-center justify-between px-6 py-3 max-w-6xl mx-auto">
+      <div className="flex items-center justify-between px-6 py-3 max-w-6xl mx-auto w-full">
         {/* Logo */}
         <Link
           href="/"
@@ -110,7 +110,7 @@ export default function Nav() {
 
       {/* Mobile Menu */}
       <div
-        className={`${tinos.className} sm:hidden w-full bg-[var(--background)]/95 backdrop-blur-md border-t border-[var(--border)] transition-all duration-300 overflow-hidden ${
+        className={`${tinos.className} sm:hidden w-full z-40 bg-[var(--background)]/95 backdrop-blur-md border-t border-[var(--border)] transition-all duration-300 overflow-hidden ${
           open ? "max-h-72 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
