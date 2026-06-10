@@ -33,7 +33,7 @@ export default function RootLayout({
       <body className={`${tinos.className} ${parisienne.className} antialiased overflow-x-hidden`}>
         <ScrollToTop />
         <Nav />
-        <div className="fade-in pt-31">
+        <div className="fade-in pt-[68px]">
           {children}
         </div>
       </body>

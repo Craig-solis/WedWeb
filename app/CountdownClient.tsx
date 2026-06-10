@@ -3,17 +3,32 @@ import Countdown from 'react-countdown';
 
 const countdownRenderer = ({ days, hours, minutes, seconds, completed }: any) => {
   if (completed) {
-    return <span className="font-bold">Event started!</span>;
-  } else {
     return (
-      <span className=" flex gap-6 font-bold text-xl md:text-2xl text-center">
-        <span>Days: {String(days).padStart(2, '0')}</span>
-        <span>Hours: {String(hours).padStart(2, '0')}</span>
-        <span>Minutes: {String(minutes).padStart(2, '0')}</span>
-        <span>Seconds: {String(seconds).padStart(2, '0')}</span>
-      </span>
+      <div className="text-center">
+        <span className="text-2xl font-bold">The big day is here!</span>
+      </div>
     );
   }
+
+  const units = [
+    { label: "Days", value: days },
+    { label: "Hours", value: hours },
+    { label: "Mins", value: minutes },
+    { label: "Secs", value: seconds },
+  ];
+
+  return (
+    <div className="flex gap-3 sm:gap-6">
+      {units.map(({ label, value }) => (
+        <div key={label} className="flex flex-col items-center min-w-[56px]">
+          <span className="text-4xl sm:text-5xl font-bold tabular-nums leading-none">
+            {String(value).padStart(2, '0')}
+          </span>
+          <span className="text-xs uppercase tracking-widest mt-2 opacity-50">{label}</span>
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default function CountdownClient({ date }: { date: Date }) {

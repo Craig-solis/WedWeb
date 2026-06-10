@@ -8,40 +8,42 @@ type RegistryTileProps = {
   productUrl?: string;
 };
 
-export default function RegistryTile({ 
-  title, 
-  price, 
-  description, 
-  image, 
-  productUrl = "https://www.amazon.com/wedding/registry/ZM3R01OFL2B1" 
+export default function RegistryTile({
+  title,
+  price,
+  description,
+  image,
+  productUrl = "https://www.amazon.com/wedding/registry/ZM3R01OFL2B1"
 }: RegistryTileProps) {
   return (
-    <div className="bg-[var(--background)] border border-[var(--border)] rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow">
-      <div className="bg-gray-100 rounded-lg p-4 mb-4 h-48 flex items-center justify-center overflow-hidden">
+    <div className="bg-white/60 backdrop-blur-sm rounded-2xl border border-[var(--foreground)]/10 shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+      <div className="h-48 bg-white flex items-center justify-center overflow-hidden">
         {image ? (
-          <Image 
+          <Image
             src={image}
             alt={title}
             width={200}
             height={200}
-            className="w-full h-full object-cover rounded-lg"
+            className="w-full h-full object-cover"
           />
         ) : (
-          <span className="text-gray-500 text-sm">Product Image</span>
+          <span className="text-sm opacity-30">No image</span>
         )}
       </div>
-      <h3 className="font-semibold text-lg mb-2">{title}</h3>
-      <p className="text-sm text-gray-600 mb-3">{description}</p>
-      <div className="flex justify-between items-center">
-        <span className="text-lg font-bold text-[var(--accent)]">{price}</span>
-        <a 
-          href={productUrl} 
-          className="bg-[var(--accent)] text-white px-4 py-2 rounded hover:opacity-90 transition-opacity"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View Item
-        </a>
+      <div className="p-5">
+        <h3 className="font-semibold text-base mb-1 leading-snug">{title}</h3>
+        <p className="text-xs opacity-50 mb-4 leading-relaxed">{description}</p>
+        <div className="flex items-center justify-between">
+          <span className="text-lg font-bold">{price}</span>
+          <a
+            href={productUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 bg-[var(--foreground)] text-white text-xs font-semibold tracking-widest uppercase rounded-full hover:opacity-75 transition-opacity"
+          >
+            View
+          </a>
+        </div>
       </div>
     </div>
   );

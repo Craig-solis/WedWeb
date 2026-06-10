@@ -1,76 +1,55 @@
-import FaqHeartIcon from "../utils/FaqHeartIcon";
-import {
-  Parisienne,
-  MonteCarlo as MonteCarloFont,
-  Tinos,
-} from "next/font/google";
+import { MonteCarlo, Tinos } from "next/font/google";
 import "../globals.css";
-import FAQList from "../utils/faq-list";
+import Link from "next/link";
 
-const monteCarlo = MonteCarloFont({ weight: "400", subsets: ["latin"] });
+const monteCarlo = MonteCarlo({ subsets: ["latin"], weight: "400" });
 const tinos = Tinos({ subsets: ["latin"], weight: "400" });
+
+const faqs = [
+  { q: "What time should I arrive?", a: "Please arrive no later than 3:30 PM — 30 minutes before the ceremony begins. Arriving on time helps us keep things running smoothly." },
+  { q: "When is everything happening?", a: "The ceremony starts at 4:00 PM. Cocktail hour follows around 5:00 PM, with the reception beginning at 6:00 PM. The event concludes at 10:30 PM." },
+  { q: "What is the wedding theme?", a: "Elegant with a touch of burgundy and light pink. Think romantic and refined." },
+  { q: "Will the wedding be indoors or outdoors?", a: "The ceremony will be held outdoors (weather permitting) and the reception will follow indoors." },
+  { q: "Is there a gift registry?", a: "Yes! Please visit the Registry page to view our Amazon wishlist and other gifting options." },
+  { q: "What is the RSVP deadline?", a: "Please RSVP no later than November 1st, 2025 to ensure your spot." },
+  { q: "Can I take photos?", a: "We love photos! However, please keep phones away during the ceremony — we have a photographer capturing every moment. After the ceremony, snap and post away!" },
+  { q: "What should I wear?", a: "Semi-formal / cocktail attire. Dresses, suits, and dressy separates are all great. Please avoid wearing white or burgundy." },
+  { q: "Still have questions?", a: "Reach out to Alyssa directly at (512) 924-9131 and she'll be happy to help." },
+];
 
 export default function FAQPage() {
   return (
-    <section
-      className={`${tinos.className} flex flex-col items-center w-full min-h-screen text-[var(--foreground)] transition-opacity duration-1500 relative overflow-hidden`}
-    >
-      <h1 className="text-4xl font-bold mt-8">FAQ's</h1>
-      <div className="w-[95%] md:w-[60%] mx-auto">
-        <ul className="h-auto">
-          <FAQList
-            title="What time should I arrive?"
-            response="Please arrive no later than 30 minutes before the ceremony. Please be on time so there aren't any disruptions during the ceremony."
-            delay="0s"
-          />
-          <FAQList
-            title="When is everything happening?"
-            response="The ceremony starts at 4pm. Following the ceremony, around 6pm is the reception. At 10:30pm the event will conclude."
-            delay="0.15s"
-          />
-          <FAQList
-            title="What is the theme for the wedding?"
-            response="The theme for the wedding is an elegant touch of burgundy and light pink."
-            delay="0.3s"
-          />
-          <FAQList
-            title="Will the wedding be indoors or outdoors?"
-            response="The wedding will be held outdoors, weather permitting, and the reception will follow indoors."
-            delay="0.45s"
-          />
-          <FAQList
-            title="Will there be a gift registry?"
-            response="There is a gift registry. Please visit the 'Registry' page for more details."
-            delay="0.90s"
-          />
-          <FAQList
-            title="Is there a deadline for RSVPs?"
-            response="Yes, please RSVP no later than November 1st, 2025 to ensure your party's spot."
-            delay="1.05s"
-          />
-          <FAQList
-            title="Can I take pictures of the wedding?"
-            response="We love photos! We do ask that you refrain from taking photos during the ceremony, we’d like that time to be unplugged as we have a photographer capturing the moment for us. For the rest of the wedding, we encourage guests to post pictures."
-            delay="1.20s"
-          />
-          <FAQList
-            title="What should I wear?"
-            response="The dress code for the wedding is semi-formal. We recommend cocktail attire, such as dresses, or suits. Please avoid wearing white or burgundy."
-            delay="1.35s"
-          />
-          <FAQList
-            title="Need more information?"
-            response={
-              <>
-                If you have any other questions or need further assistance, please don't hesitate to reach out to us.
-                <br />
-                <strong>Alyssa Solis: (512)924-9131</strong>
-              </>
-            }
-            delay="1.50s"
-          />
-        </ul>
+    <div className={`${tinos.className} flex flex-col w-full min-h-screen text-[var(--foreground)]`}>
+
+      {/* Hero Banner */}
+      <div className="w-full bg-[var(--foreground)] text-white py-20 flex flex-col items-center text-center px-4">
+        <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-3">Have Questions?</p>
+        <h1 className={`text-5xl md:text-7xl text-white ${monteCarlo.className}`}>FAQ</h1>
+        <p className="text-sm text-white/50 mt-4 max-w-sm leading-relaxed">Everything you need to know before the big day</p>
       </div>
-    </section>
+
+      {/* FAQ Cards */}
+      <div className="w-full max-w-2xl mx-auto px-4 py-16 flex flex-col gap-4">
+        {faqs.map(({ q, a }, i) => (
+          <div key={i} className="bg-white/60 backdrop-blur-sm rounded-2xl border border-[var(--foreground)]/10 shadow-sm px-7 py-6">
+            <h2 className="text-base md:text-lg font-semibold mb-2">{q}</h2>
+            <p className="text-sm opacity-65 leading-relaxed">{a}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* CTA Footer */}
+      <div className="w-full bg-[var(--foreground)] text-white py-16 flex flex-col items-center text-center px-4">
+        <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-3">Ready to join us?</p>
+        <h2 className={`text-4xl md:text-5xl text-white mb-8 ${monteCarlo.className}`}>We hope to see you there</h2>
+        <Link
+          href="/rsvp"
+          className="px-8 py-3 bg-white text-[var(--foreground)] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/90 transition-all"
+        >
+          RSVP Now
+        </Link>
+      </div>
+
+    </div>
   );
 }

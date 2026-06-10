@@ -3,17 +3,25 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 import "../globals.css";
-import { Parisienne, MonteCarlo, Tinos } from "next/font/google";
+import { MonteCarlo, Tinos } from "next/font/google";
 
 const monteCarlo = MonteCarlo({
   subsets: ["latin"],
-  weight: "400", // MonteCarlo only has 400
+  weight: "400",
 });
 
 const tinos = Tinos({
   subsets: ["latin"],
-  weight: "400", // Tinos only has 400
+  weight: "400",
 });
+
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/registry", label: "Registry" },
+  { href: "/location", label: "Location" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/rsvp", label: "RSVP", accent: true },
+];
 
 export default function Nav() {
   const pathname = usePathname();
@@ -26,9 +34,9 @@ export default function Nav() {
       if (typeof window === "undefined") return;
       const currentScrollY = window.scrollY;
       if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
-        setShowNav(false); // scrolling down
+        setShowNav(false);
       } else {
-        setShowNav(true); // scrolling up
+        setShowNav(true);
       }
       lastScrollY.current = currentScrollY;
     };
@@ -38,200 +46,91 @@ export default function Nav() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 flex flex-col items-center text-[var(--foreground)] shadow-md bg-[var(--background)] transition-transform duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[var(--background)]/85 border-b border-[var(--border)] transition-transform duration-300 ${
         showNav ? "translate-y-0" : "-translate-y-full"
       }`}
       style={{ willChange: "transform" }}
     >
-      {/* Overlay for mobile menu */}
       {open && (
         <div
-          className="sm:hidden fixed inset-0 bg-transparent z-40"
+          className="sm:hidden fixed inset-0 z-40"
           onClick={() => setOpen(false)}
           aria-label="Close menu overlay"
         />
       )}
-      <div className="flex items-center p-4 w-full flex-col relative">
-        {/* Left: Logo */}
-        <div
-          className={`font-bold flex text-4xl sm:text-5xl mb-4 ${monteCarlo.className}`}
+
+      <div className="flex items-center justify-between px-6 py-3 max-w-6xl mx-auto">
+        {/* Logo */}
+        <Link
+          href="/"
+          className={`text-3xl text-[var(--foreground)] hover:text-[var(--accent)] transition-colors leading-none ${monteCarlo.className}`}
         >
-          <Link href="/">Kyge and Alyssa</Link>
-        </div>
-        {/* Right: Nav and Hamburger, take remaining space */}
-        <div className="flex-1 flex items-center justify-center relative">
-          {/* Hamburger Icon with animation */}
-          <button
-            className="sm:hidden ml-auto z-50 flex flex-col justify-center items-center w-10 h-10 focus:outline-none"
-            onClick={() => setOpen(!open)}
-            aria-label={open ? "Close menu" : "Open menu"}
-          >
-            <span
-              className={`block h-0.5 w-7 bg-black transition-transform duration-300 ease-in-out ${
-                open ? "rotate-45 translate-y-2" : ""
-              }`}
-            />
-            <span
-              className={`block h-0.5 w-7 bg-black my-1 transition-all duration-300 ease-in-out ${
-                open ? "opacity-0" : ""
-              }`}
-            />
-            <span
-              className={`block h-0.5 w-7 bg-black transition-transform duration-300 ease-in-out ${
-                open ? "-rotate-45 -translate-y-1" : ""
-              }`}
-            />
-          </button>
-          {/* Desktop Nav */}
-          <ul
-            className={`hidden sm:flex space-x-6 items-center justify-center w-full ${tinos.className}`}
-          >
-            <li>
+          Kyge &amp; Alyssa
+        </Link>
+
+        {/* Desktop Nav */}
+        <ul className={`hidden sm:flex items-center gap-7 ${tinos.className}`}>
+          {links.map(({ href, label, accent }) => (
+            <li key={href}>
               <Link
-                href="/"
-                className={`nav-underline text-lg hover:no-underline text-[var(--foreground)] hover:text-[var(--accent)]${
-                  pathname === "/" ? " active" : ""
-                }`}
+                href={href}
+                className={`nav-underline text-base transition-colors hover:no-underline hover:text-[var(--accent)] ${
+                  accent ? "font-semibold italic" : ""
+                } text-[var(--foreground)]${pathname === href ? " active" : ""}`}
               >
-                Home
+                {label}
               </Link>
             </li>
-            <li>
-              <Link
-                href="/registry"
-                className={`nav-underline text-lg hover:no-underline text-[var(--foreground)] hover:text-[var(--accent)]${
-                  pathname === "/registry" ? " active" : ""
-                }`}
-              >
-                Registry
-              </Link>
-            </li>
-            {/* Schedule Link
-            <li>
-              <Link
-                href="/schedule"
-                className={`nav-underline text-lg hover:no-underline text-[var(--foreground)] hover:text-[var(--accent)]${
-                  pathname === "/schedule" ? " active" : ""
-                }`}
-              >
-                Schedule
-              </Link>
-            </li>
-            */}
-            <li>
-              <Link
-                href="/location"
-                className={`nav-underline text-lg hover:no-underline text-[var(--foreground)] hover:text-[var(--accent)]${
-                  pathname === "/location" ? " active" : ""
-                }`}
-              >
-                Location
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/faq"
-                className={`nav-underline text-lg hover:no-underline text-[var(--foreground)] hover:text-[var(--accent)]${
-                  pathname === "/faq" ? " active" : ""
-                }`}
-              >
-                FAQ
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/rsvp"
-                className={`nav-underline text-lg font-bold italic hover:no-underline text-[var(--foreground)] hover:text-[var(--accent)]${
-                  pathname === "/rsvp" ? " active" : ""
-                }`}
-              >
-                RSVP
-              </Link>
-            </li>
-          </ul>
-        </div>
+          ))}
+        </ul>
+
+        {/* Hamburger */}
+        <button
+          className="sm:hidden z-50 flex flex-col justify-center items-center w-10 h-10 focus:outline-none"
+          onClick={() => setOpen(!open)}
+          aria-label={open ? "Close menu" : "Open menu"}
+        >
+          <span
+            className={`block h-0.5 w-6 bg-[var(--foreground)] transition-all duration-300 ${
+              open ? "rotate-45 translate-y-1.5" : ""
+            }`}
+          />
+          <span
+            className={`block h-0.5 w-6 bg-[var(--foreground)] my-1 transition-all duration-300 ${
+              open ? "opacity-0" : ""
+            }`}
+          />
+          <span
+            className={`block h-0.5 w-6 bg-[var(--foreground)] transition-all duration-300 ${
+              open ? "-rotate-45 -translate-y-1.5" : ""
+            }`}
+          />
+        </button>
       </div>
-      {/* Mobile Menu: Slide down from hamburger button */}
+
+      {/* Mobile Menu */}
       <div
-        className={`${
-          tinos.className
-        } sm:hidden absolute left-0 right-0 mx-auto w-full bg-white shadow-lg z-40 transform transition-transform transition-opacity duration-500 ease-in-out origin-top overflow-hidden ${
-          open ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
+        className={`${tinos.className} sm:hidden w-full bg-[var(--background)]/95 backdrop-blur-md border-t border-[var(--border)] transition-all duration-300 overflow-hidden ${
+          open ? "max-h-72 opacity-100" : "max-h-0 opacity-0"
         }`}
-        style={{ top: "60px", willChange: "transform", height: "auto" }}
-        onClick={(e) => e.stopPropagation()}
       >
-        <ul className="flex flex-col justify-center items-center mt-12 px-6 pb-4">
-          <li>
-            <Link
-              href="/"
-              className={`block py-2 text-lg text-[var(--foreground)] hover:scale-110 hover:text-[var(--accent)] hover:no-underline${
-                pathname === "/" ? " active" : ""
-              }`}
-              onClick={() => setOpen(false)}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/registry"
-              className={`block py-2 text-lg text-[var(--foreground)] hover:scale-110 hover:text-[var(--accent)] hover:no-underline${
-                pathname === "/registry" ? " active" : ""
-              }`}
-              onClick={() => setOpen(false)}
-            >
-              Registry
-            </Link>
-          </li>
-          {/* Schedule Link
-          <li>
-            <Link
-              href="/schedule"
-              className={`block py-2 text-lg text-[var(--foreground)] hover:scale-110 hover:text-[var(--accent)] hover:no-underline${
-                pathname === "/schedule" ? " active" : ""
-              }`}
-              onClick={() => setOpen(false)}
-            >
-              Schedule
-            </Link>
-          </li>
-          */}
-          <li>
-            <Link
-              href="/location"
-              className={`block py-2 text-lg text-[var(--foreground)] hover:scale-110 hover:text-[var(--accent)] hover:no-underline${
-                pathname === "/location" ? " active" : ""
-              }`}
-              onClick={() => setOpen(false)}
-            >
-              Location
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/faq"
-              className={`block py-2 text-lg text-[var(--foreground)] hover:scale-110 hover:text-[var(--accent)] hover:no-underline${
-                pathname === "/faq" ? " active" : ""
-              }`}
-              onClick={() => setOpen(false)}
-            >
-              FAQ
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/rsvp"
-              className={`block py-2 text-lg font-bold italic text-[var(--foreground)] hover:scale-110 hover:text-[var(--accent)] hover:no-underline${
-                pathname === "/rsvp" ? " active" : ""
-              }`}
-              onClick={() => setOpen(false)}
-            >
-              RSVP
-            </Link>
-          </li>
+        <ul className="flex flex-col items-center py-4 gap-1">
+          {links.map(({ href, label, accent }) => (
+            <li key={href}>
+              <Link
+                href={href}
+                className={`block py-2 px-6 text-lg transition-colors hover:text-[var(--accent)] hover:no-underline ${
+                  accent ? "font-semibold italic" : ""
+                } text-[var(--foreground)]${pathname === href ? " active" : ""}`}
+                onClick={() => setOpen(false)}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
   );
 }
+

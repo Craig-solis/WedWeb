@@ -1,45 +1,71 @@
-.nav-underline.active,
-.block.active {
-  color: var(--accent) !important;
+@import "tailwindcss";
+
+:root {
+  --background: #fdf4f5;
+  --foreground: #640000;
+  --accent: #e8929f;
+  --muted: #9a7070;
+  --border: rgba(100, 0, 0, 0.15);
 }
-.nav-underline.active::after {
-  transform: translateX(-50%) scaleX(1);
-  background: var(--accent);
-}
-@keyframes pulse-faq-circle {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 0.15;
-  }
-  50% {
-    transform: scale(1);
-    opacity: 0.35;
-  }
-}
+
 html {
   scroll-behavior: smooth;
 }
-.faq-pulse-circle {
-  animation: pulse-faq-circle 1.5s infinite;
-  transform-origin: center;
+
+body {
+  background: var(--background);
+  color: var(--foreground);
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.fade-in {
-  animation: fadeIn 1.2s ease-in;
-}
-/* Force Tinos font for all children of .tinos-section */
+
+/* Tinos section */
 .tinos-section,
 .tinos-section * {
   font-family: "Tinos", serif !important;
 }
+
+/* Nav underline animation */
+.nav-underline {
+  position: relative;
+  display: inline-block;
+}
+.nav-underline::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 80%;
+  height: 1.5px;
+  background: var(--accent);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 1px;
+}
+.nav-underline:hover::after,
+.nav-underline.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.nav-underline.active,
+.block.active {
+  color: var(--accent) !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in {
+  animation: fadeIn 0.9s ease-out both;
+}
+
 @keyframes petal-fall {
   0% {
     opacity: 0;
@@ -56,49 +82,19 @@ html {
 .animate-petal-fall {
   animation: petal-fall 5.5s linear infinite;
 }
-@import "tailwindcss";
 
-@media (prefers-color-scheme) {
-  :root {
-    --background: #ffecef;
-    --foreground: #640000;
-    --accent: #ff93a3;
+@keyframes pulse-faq-circle {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.15;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.35;
   }
 }
-
-/*
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ffffff;
-    --foreground: #171717;
-    --accent: #ffb6c1;
-  }
-}
-*/
-body {
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-
-  /* Center-out underline effect for nav links */
-  .nav-underline {
-    position: relative;
-    display: inline-block;
-  }
-  .nav-underline::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%) scaleX(0);
-    transform-origin: center;
-    width: 80%;
-    height: 2px;
-    background: var(--accent);
-    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 1px;
-  }
-  .nav-underline:hover::after,
-  .nav-underline:focus::after {
-    transform: translateX(-50%) scaleX(1);
-  }
+.faq-pulse-circle {
+  animation: pulse-faq-circle 1.5s infinite;
+  transform-origin: center;
 }
